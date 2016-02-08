@@ -37,8 +37,6 @@ int main(int ac, char **av)
 {
 	int ret;
 
-	printf("WARNING: this utility is deprecated, please use 'btrfs inspect-internal dump-tree'\n\n");
-
 	set_argv0(av);
 
 	if (ac > 1 && !strcmp(av[1], "--help"))
