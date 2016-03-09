@@ -16,22 +16,11 @@
  * Boston, MA 021110-1307, USA.
  */
 
-#include "volumes.h"
-#include "utils.h"
-#include "commands.h"
-#include "cmds-inspect-tree-stats.h"
+#ifndef __CMDS_INSPECT_TREE_STATS_H__
+#define __CMDS_INSPECT_TREE_STATS_H__
 
+int cmd_inspect_tree_stats(int argc, char **argv);
 
-int main(int argc, char **argv)
-{
-	int ret;
+extern const char * const cmd_inspect_tree_stats_usage[];
 
-	if (argc > 1 && !strcmp(argv[1], "--help"))
-		usage(cmd_inspect_tree_stats_usage);
-
-	ret = cmd_inspect_tree_stats(argc, argv);
-
-	btrfs_close_all_devices();
-
-	return ret;
-}
+#endif
